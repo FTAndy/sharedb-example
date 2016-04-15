@@ -3084,8 +3084,6 @@ EventEmitter.prototype.emit = function(type) {
       if (er instanceof Error) {
         throw er; // Unhandled 'error' event
       }
-      console.log(type)
-      console.log(er)
       throw TypeError('Uncaught, unspecified "error" event.');
     }
   }
