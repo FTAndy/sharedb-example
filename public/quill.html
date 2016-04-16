@@ -148,7 +148,6 @@ var sdb = new sharedb.Connection(socket);
 var doc = sdb.get('docs', 'rich');
 
 doc.subscribe(function(error) {
-  console.log('fuck')
   if (!doc.type) {
       doc.create('rich', '');
       console.log('created as rich-text', doc);

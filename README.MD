@@ -18,5 +18,3 @@ and
 ```
 $ node app.js
 ```
-
-but still has bugs

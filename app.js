@@ -42,7 +42,6 @@ server.use(browserChannel({
   stream.headers = client.headers;
   stream.remoteAddress = stream.address;
   client.on('message', function(data) {
-    // data = JSON.parse(data)
     console.log('c->s ', JSON.stringify(data));
     return stream.push(data);
   });
