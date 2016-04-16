@@ -10,7 +10,7 @@ exports.checkOp = function(op) {
   if (op == null || typeof op !== 'object') return {message: 'Missing op'};
 
   if (op.op != null) {
-    if (!Array.isArray(op.op)) return {message: 'op must be an array'};
+    // if (!Array.isArray(op.op)) return {message: 'op must be an array'};
 
   } else if (op.create != null) {
     if (typeof op.create !== 'object') return {message: 'create data must be an object'};
