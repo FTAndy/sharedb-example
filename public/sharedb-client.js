@@ -1276,7 +1276,7 @@ module.exports={
   "gitHead": "fe2664cff89f02e623348bf42bca97f87c015da2",
   "_id": "rich-text@3.0.0",
   "_shasum": "e7ad6bc913999aa2b915e434216639842bba85f4",
-  "_from": "rich-text@*",
+  "_from": "rich-text@>=3.0.0 <4.0.0",
   "_npmVersion": "3.5.2",
   "_nodeVersion": "5.3.0",
   "_npmUser": {
@@ -2385,7 +2385,7 @@ function transformX(client, server) {
  * @private
  */
 Doc.prototype._otApply = function(op, source) {
-  this.locked = true;
+  this.locked = true
   if (op.op) {
     if (!this.type) {
       var err = new Error('Cannot apply op to uncreated document. ' + this.collection + '.' + this.id);
@@ -2441,7 +2441,7 @@ Doc.prototype._otApply = function(op, source) {
     // For ops from other clients, this will be after the op has been
     // committed to the database and published
     this.emit('op', op.op, source);
-    this.locked = false;
+    this.locked = false
     return;
   }
 
@@ -3016,7 +3016,7 @@ function mixin(Constructor) {
 
 },{"events":18}],16:[function(require,module,exports){
 
-exports.defaultType = require('rich-text').type
+exports.defaultType = require('rich-text').type;
 
 exports.map = {};
 

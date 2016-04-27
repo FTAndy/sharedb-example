@@ -11,14 +11,12 @@ var server = connect()
 
 server.use(serveStatic(__dirname + "/public", {'index': ['quill.html']}));
 
-// var db = require('mongodb').connect('mongodb://localhost:27017', function(err, mongo) {
-//   if (err) throw err;
-//   var db = require('sharedb-mongo')({mongo: mongo});
-// });
+var db = require('mongodb').connect('mongodb://localhost:27017', function(err, mongo) {
+  if (err) throw err;
+  var db = require('sharedb-mongo')({mongo: mongo});
+});
 
-// var backend = ShareDB({db: db});
-
-var backend = ShareDB()
+var backend = ShareDB({db: db});
 
 var numClients = 0
 
